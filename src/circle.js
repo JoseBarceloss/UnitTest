@@ -19,7 +19,7 @@
 */
 
 const circle = (radius) => {
-  const PI = 3.14;
+  const PI = Math.PI;
 
   if (!radius || typeof radius !== 'number') { return undefined; }
 
@@ -31,3 +31,4 @@ const circle = (radius) => {
 };
 
 module.exports = circle;
+

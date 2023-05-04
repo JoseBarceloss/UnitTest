@@ -24,31 +24,13 @@ const circle = require('../src/circle');
 describe('4 - Implemente os casos de teste para a função `circle`', () => {
   it('Verifica se ao receber um raio, a função `circle` retorna um objeto contendo os valores esperados', () => {
     fail('Teste vazio!');
-   
+    // ESCREVA SEUS TESTES ABAIXO:
+    // Teste se circle retorna undefined, caso o parâmetro passado não seja um número.
+    // Teste se circle retorna um objeto.
+    // Teste se o objeto retornado possui 3 propriedades.
+    // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
+    // Teste se dentro do objeto retornado, a função retorna uma `key` com `value` igual à circunferência correta para um círculo de raio 2.
+    // Teste se dentro do objeto retornado, a função retorna uma `key` com `value` igual à área correta para um círculo de raio 3.
+    // Teste se a função retorna, em um objeto, os dados corretos de um círculo de raio 3.
   });
-});
-
-it('Verifica se ao receber um raio, a função `circle` retorna um objeto contendo os valores esperados', () => {
-  const obj = { radius: 5,
-      area: 78.5,
-      circumference: 31.400000000000002
-  }
-  expect(circle(5)).toEqual(obj);
-})
-it('Teste se circle retorna um objet', () => {
-  expect(circle(100)).toEqual({area: 31400, circumference: 628, radius: 100})
-})
-it('Teste se o objeto retornado possui 3 propriedades', () => {
-  const test = circle(5);
-  const testLength = Object.keys(test);
-  expect(testLength).toHaveLength(3);
-})
-it('Teste se a função, quando não recebe nenhum parâmetro, retorna undefined', () => {
-  expect(circle()).toBe(undefined);
-})
-it('Teste se dentro do objeto retornado, a função retorna uma `key` com `value` igual à circunferência correta para um círculo de raio 2', () => {
-  expect(circle(2)).toMatchObject({radius: 2, area: 12.56, circumference: 12.56})
-})
-it('Teste se a função retorna, em um objeto, os dados corretos de um círculo de raio 3', () => {
-  expect(circle(3)).toMatchObject({radius: 3, area: 28.259999999999998, circumference: 18.84})
 });

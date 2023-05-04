@@ -16,17 +16,12 @@ const average = (arr) => {
     return undefined;
   }
 
-  const sum = arr.reduce((acc, curr) => {
-    if (typeof curr !== 'number') {
-      return undefined;
-    }
-    return acc + curr;
-  }, 0);
-
-  if (sum === undefined) {
+  const hasNonNumericValues = arr.some((value) => typeof value !== 'number');
+  if (hasNonNumericValues) {
     return undefined;
   }
 
+  const sum = arr.reduce((acc, curr) => acc + curr, 0);
   const avg = Math.round(sum / arr.length);
   return avg;
 };
